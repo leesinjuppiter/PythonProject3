@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2025/4/11 16:13
 # @Author  : LeeSw
+#爬取斗图吧图片,非常简单,静态页面
 import requests
 from lxml import etree
 import time

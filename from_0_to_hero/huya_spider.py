@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2025/4/11 04:24
 # @Author  : LeeSw
+#爬取虎牙直播间信息,非常简单,直接请求接口
 from http.client import responses
 import pymongo
 import requests
