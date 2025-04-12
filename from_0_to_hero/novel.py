@@ -3,6 +3,7 @@
 # @Time    : 2025/4/12 03:10
 # @Author  : LeeSw
 # @File    : novel.py
+爬取小说
 import asyncio
 import requests
 from lxml import etree
