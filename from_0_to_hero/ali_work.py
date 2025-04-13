@@ -24,6 +24,9 @@ class AliWork(object):
             'Cookie': 'XSRF-TOKEN=d1691ad1-adc6-4316-867a-47862725802f; SESSION=QjMzREM1OUZEMEQ1ODc3NjRDNTg5REQ0RUYzNzY0Mzk=; cna=FP+BIFU/GXUCAbfsXrUd0Xge; xlly_s=1; prefered-lang=zh; isg=BFhY9_jCi8DcXqdEU15G06QPKYbqQbzLhiUeJ5JI7hNyLfkXOlJSWgVOZWUdO3Sj; tfstk=go3ExXA53eLeth0eE54P0zYmWF4Lyyvf-4w7ZbcuOJ23FHdPzAl0qatLR7YrFAZoRyGIQYkqhk0BvXGlrb2TFJwIA7YrIAZ3PDwQZ63Z3a_BpHhlzzakhKTXlXFLyzvjYvRGO9FQT8Y7K72gJ7Mo3MmWlXhds6WkGcYfUBqPJb2oEkqGS7wgZwboENbgB7FlK7bH_f2TI72utuXgjWF7EMDurClgB7S3rkcuHuqV77EHNmXak5_hskemtR7lusFUxOGCVa7ykWE3nkw5rkuaTkymt2NLLqVi5Vrbf_9USjnsK5z28tFEjjz3a4dc48rrJPPoLEC4I2lr7kn1GZca4Joi-l5lrX4uKuirLpSLKDMaD5qGaEFshRcK-cRRIXDbLyVgfEAqsumsJo3BIwzmDXaIqxv1AJm4ZguOe5AHd4nFEgr365yX_ClK2nixiTpehgI8AOFahBAh2gE365yX_CSR2ktY_-OHt',
             'Referer': 'https://talent.taotian.com/off-campus/position-list?lang=zh&search='
         }
+    def __del__(self):
+        self.cursor.close()
+        self.db.close()
 
     def get_work_info(self):
         for page in range(1, 11):
