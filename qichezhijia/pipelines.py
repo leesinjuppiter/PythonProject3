@@ -13,7 +13,7 @@ class QichezhijiaPipeline:
     def open_spider(self, spider):
         if spider.name == "ershou":
             # 线上测试数据库
-            # self.db = pymysql.connect(host='localhost', user='root', password='Lsw8023life!@', database='python_project', charset='utf8mb4')
+           
             self.db = pymysql.connect(host='localhost', user='root', password='123456', database='python', charset='utf8mb4')
             self.cursor = self.db.cursor()
             sql = """
